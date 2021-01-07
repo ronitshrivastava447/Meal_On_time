@@ -1,0 +1,1288 @@
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>Meal on Time</title>
+
+	<link href="https://fonts.googleapis.com/css?
+
+family=Montserrat" rel="stylesheet">
+
+	<link rel="stylesheet" href="normalize.css">
+
+
+  	<link rel="stylesheet" href="custom.css">
+
+<style >
+html{
+	scroll-behavior: smooth;
+}
+
+#innertr{
+	align-items: center;
+	font-family: Geneva;
+	padding: 20px;
+	margin: 0 0 40 0 ;
+}
+
+input{
+	  border: 1px solid white;
+	 border-color:rgb(255,98,27);
+    border-radius: 20px; 
+    width: 30%;
+    padding: 5px 9px;
+    margin: 2px;
+    background-color: black;
+    color: yellow;
+    transition: width .3s;
+    
+}
+input:focus{
+	width: 300px;
+}
+#but{
+	border:1px ;
+	border-radius: 20px;
+	background-color: rgb(230, 237, 237);
+	font-family: arial ;
+	margin: 4px;
+	justify-content: right;
+	box-shadow: -2px -2px white,3px 3px grey;
+
+
+}
+#but:focus	{
+box-shadow: 0 0 white ,0 0 black	;
+	box-shadow: inset 3px 3px grey,-3px -3px white;
+		color: black;
+}
+
+.product p {
+color: white;
+}
+/*.product div{
+	background-color: black;
+}
+*/
+
+</style>
+
+<!-- script -->
+<script type="text/javascript">
+	function bmi_cal() {
+		var h=document.getElementById('h').value;
+		var w=document.getElementById('w').value;
+	
+		
+		var bmi=(w/((h*h)/100))*100;
+		
+		//document.write("your bmi is:-"+ bmi +"kg/metersq");
+	if(bmi<18)
+	{
+		
+		document.getElementById('bmi').innerHTML="your bmi is :- "+ " " + bmi.toFixed(2)+"kg/m2" +" " + "and You are in the UNDERWEIGHT Category!!";
+		document.getElementById('chart1').style.display="block";
+		document.getElementById('chart3').style.display="none";
+		document.getElementById('normal').style.display="none";
+		document.getElementById('chart2').style.display="none";
+		  document.getElementById('sparkle').style.display="block";
+		  document.getElementById('normal').style.display="block";
+		   document.getElementById('sparkle1').style.display="block";
+		  document.getElementById('chart4').style.display="none";
+		window.scrollBy(0,605);
+	
+	}
+	// document.getElementById('bmi').innerHTML="your bmi is :- "+ bmi + "and you are in UNDERWEIGHT Category!!" ;
+	if(bmi>=18 && bmi<24)
+	{
+		document.getElementById('bmi').innerHTML="your bmi is :- "+ bmi.toFixed(2) + "and You are in NORMAL Category!!";
+		 // document.getElementById('chart2').style.display="block";
+		 document.getElementById('chart3').style.display="none";
+		document.getElementById('chart1').style.display="none";
+		document.getElementById('chart2').style.display="block";
+		  document.getElementById('sparkle').style.display="block";
+		  document.getElementById('normal').style.display="block";
+		   document.getElementById('sparkle1').style.display="block";
+		  document.getElementById('chart4').style.display="none";
+		 window.scrollBy(0,525);
+	}
+	if(bmi>=24 && bmi<28)
+	{
+		document.getElementById('bmi').innerHTML="your bmi is :- "+ bmi + "and You are in OVERWEIGHT Category!!";
+		document.getElementById('chart3').style.display="block";
+		document.getElementById('chart1').style.display="none";
+		document.getElementById('chart4').style.display="none";
+		document.getElementById('normal').style.display="none";
+		document.getElementById('normal').style.display="none";
+		 window.scrollBy(0,605);
+	}
+	if(bmi>28)
+		{
+		document.getElementById('bmi').innerHTML="your bmi is :- "+ bmi + "and You are in OBSESE Category!!";
+
+		document.getElementById('chart4').style.display="block";
+		document.getElementById('chart3').style.display="none";
+		document.getElementById('chart1').style.display="none";
+		document.getElementById('normal').style.display="none";
+		document.getElementById('normal').style.display="none";
+		document.getElementById('chart2').style.display="none";
+		document.getElementById('sparkle1').style.display="block";
+		document.getElementById('sparkle').style.display="block";
+		window.scrollBy(0,605);
+
+		}
+	}
+</script>
+
+<!--  -->
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<table width="100%" height="125" border="0" cellspacing="0" cellpadding="0" bgcolor="black" >
+
+<tr>
+	<td style="align-items: left"><h5 style="font-family: Brush Script MT;font-size:40; 
+	color:#73e600;  margin: 0 0 0 20;">Meal On Time</h5></td>
+	<td align="	center">
+
+		<table width="400" border="0" align="center" cellspacing="1" cellpadding="1">
+
+			<tr id="innertr" align="center">
+	
+
+			<td  width="120"><a href="https://www.google.com"><font face="Geneva" color="#73e600"><h3>Home</h3></a></font></td>
+
+			<td width="129"><a href="https://www.google.com"><font face="Geneva" color="#73e600"><h3>About us</h3></a></font></td>
+
+			<td width="144"><a href="#"><font face="Geneva" color="#73e600"><h3>Contact-us</h3></a></font></td>
+
+				
+		</table>
+		
+	</td>
+</tr>
+	
+</table>
+
+<!-- Navigation ends -->
+<center>
+<header>
+
+	
+<section class="hero_image">
+	
+	<div class="hero_wrapper">
+	<br>
+	<h5 style="font-family: Brush Script MT;font-size:40; 
+	color: black ; ">Let's Pledge for<span style="color:#73e600;">Healthy</span> World..!!!</h5>
+	<br>
+	
+<p style="color: black"><i>This platform creates personalized meal plans based on your food preferences, budget, and schedule. Reach your diet and nutritional goals with our calorie calculator, weekly meal plans, grocery lists and more.</i>
+    </p>
+<p style="color:black;">Create your meal plan right here in seconds.</p>
+<p style="color:black;">Ready to give it a shot? Let us know your diet.
+                    #EATOFIT </p>
+
+
+
+	<form  method="post">
+ 
+
+<span style="color:black">Name:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="1" id="g" placeholder="Name"><br>
+ <span style="color:black">Weight:</span>&nbsp;	<input type="number" name="2" id="w" placeholder="Weight(kg)"><br>
+ <span style="color:black">Height:</span>&nbsp;&nbsp;&nbsp;<input type="number" name="3" id="h" placeholder="Height(cm)"><br>
+ <span style="color:black">Age:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="4" id="a" placeholder="Age"><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <button  type="button" id="but" onclick="bmi_cal()" value="Your Diet Plan">Your Diet Plan</button>
+ <button type="reset" >Reset</button>
+
+<b><p id="bmi" style="color: black;"></p></b>
+	</form>
+	<br><br><br><br>
+		</div>
+</section>
+<section>
+<div style="display: flex;">
+<img src="sparkle.gif" width="350" height="150" id="sparkle" style="display: none;">
+<img width="550" height="150" id="normal" src="normal.gif" style="display: none;">
+<img src="sparkle.gif" width="350" height="150" id="sparkle1" style="display: none;">
+</div>
+</section>
+<!-- CHART FOR Under weight CATEGORY  -->
+
+<div id="chart1" style="display:none;">
+	<table   style="border: 3px solid black;border-radius: 2px; color:yellow; background-image: url('cake1.jpg')">
+		<tr><span style="color: Yellow; background-color: black; width:1000;">This is your chart to boost your body health..!!
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Sunday
+			
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>2 egg brown bread sandwich + green chutney + 1 cup milk + 3 cashews + 4 almonds + 2 walnuts</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup banana shake</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup arhar dal + 1 cup potato curry + 3 chapatti + 1/2 cup rice + 1/2 cup low fat curd + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup strawberry smoothie + 1 cup vegetable poha</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1.5 cup chicken curry + 3 chapatti + salad</td>
+				</tr>
+			</table>
+			</th>
+
+
+		</tr>
+		
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Monday
+			
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>3 onion stuffed parantha + 1 cup curd + 3 cashews + 4 almonds + 2 walnuts</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup banana shake</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup moong dal/ chicken curry + 1 cup potato and caulifllower vegetable + 3 chapatti + 1/2 cup rice + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>11 cup pomegranate juice + 2 butter toasted bread</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup beans potato vegetable + 3 chapatti + salad</td>
+				</tr>
+			</table>
+
+			</th>
+
+		</tr>
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Tuesday
+			
+
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>3 paneer stuffed besan cheela + green chutney + 1 cup curd + 3 cashews + 4 almonds + 2 walnuts</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 apple smoothie with maple syrup</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup masoor dal + 1 cup calocasia + 3 chapatti + 1/2 cup rice + 1 cup low curd + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup tomato soup with bread crumbs + 1 cup aloo chaat</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup carrot peas vegetable +3 chapatti + salad</td>
+				</tr>
+			</table>
+			</th>
+
+		</tr>
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Wednesday
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>1.5 cup vegetable bread upma + 1 cup milk + 3 cashews + 4 almonds + 2 walnuts</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup ripe banana with 2 tsp ghee</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup rajma curry + 1 cup spinach potato + 3 chapatti + 1/2 cup rice + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup vegetable juice + 1 cup upma</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1.5 cup parwal vegetable + 3 chapatti + salad</td>
+				</tr>
+			</table>
+
+			</th>
+
+		</tr>
+
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"><h1 style="font-size: 100; color:orange;">FIT</h1></th>
+			<th>Thursday
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>2 cucmber potato sandwich + 1 tsp green chutney + 1 orange juice + 3 cshews + 2 walnuts + 4 almonds</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup buttermilk + 1 cup sweet potato chaat</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup white chana/ fish curry + 3 chapatti + 1/2 cup rice + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup almond milk + banana</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup cauliflower potato vegetable + 3 chapatti + salad</td>
+				</tr>
+			</table>
+			</th>
+
+		</tr>
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"><h1 style="font-size: 100; color:orange;">EAT</h1></th>
+			<th>Friday
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>	2 cup vegetable poha + 1 cup curd + 3 cashews + 4 almonds + 2 walnuts</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>2 cups watermelon juice</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup chana dal + 1 cup bhindi vegetable + 3 chapatti + 1/2 cup rice + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup sprouts salad + 2 potato cheela + green chutney</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup peas mushroom vegetable + 3 chapatti + salad</td>
+				</tr>
+			</table>
+
+			</th>
+			</tr>
+
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Saturday
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>3 vegetable suji cheela + 1 cup strawberry shake + 4 cashews + 4 almonds + 3 walnuts</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup coconut water + 1 cup pomegrate</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup mix dal + 1 cup soybean curry + 3 chapatti + 1/2 cup curd + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup fruit salad + 4 pc vegetable cutlets + green chutney</td>
+																				
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup karela vegetable + 3 chaptti + salad</td>
+				</tr>
+			</table>
+			</th>
+
+		</tr>
+
+
+	</table>
+</div>
+
+<!-- under weight ends  -->
+
+
+<!-- normal person starts -->
+
+<div id="chart2" style="display:none;">
+	<table   style="border: 3px solid black;border-radius: 2px; color:yellow; background-image: url('cake1.jpg');width: 100%">
+		<tr><span style="color:  green; background-color: black; width:1000;">This is your chart to maintain your healthy body..!!
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+
+			<th>Sunday
+			
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>Buckwheat porridge with sliced mango</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup banana shake</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>Vegetable soup with whole-grain roti</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup strawberry smoothie + 1 cup vegetable poha</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>Masala-baked tofu with vegetable curry + salad</td>
+				</tr>
+			</table>
+			</th>
+
+
+		</tr>
+		
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Monday
+			
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>Sambar with brown rice idli</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup banana shake</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>Whole-grain roti with mixed-vegetable curry</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>11 cup pomegranate juice + 2 butter toasted bread</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>Tofu curry with mixed vegetables and a fresh spinach salad</td>
+				</tr>
+			</table>
+
+			</th>
+
+		</tr>
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Tuesday
+			
+
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td> Chana dal pancakes with mixed vegetables and a glass of milk</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 apple smoothie with maple syrup</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>Chickpea curry with brown rice</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup tomato soup with bread crumbs + 1 cup aloo chaat</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td> Khichdi with sprout salad</td>
+				</tr>
+			</table>
+			</th>
+
+		</tr>
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Wednesday
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>Apple cinnamon porridge made with milk and topped with sliced almonds</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup ripe banana with 2 tsp ghee</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>Whole-grain roti with tofu and mixed vegetables</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup vegetable juice + 1 cup upma</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>Palak paneer with brown rice and vegetables</td>
+				</tr>
+			</table>
+
+			</th>
+
+		</tr>
+
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"><h1 style="font-size: 100; color:orange;">FIT</h1></th>
+			<th>Thursday
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>Yogurt with sliced fruits and sunflower seeds</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup buttermilk + 1 cup sweet potato chaat</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>Whole-grain roti with vegetable subji</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup almond milk + banana</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>Chana masala with basmati rice and green salad</td>
+				</tr>
+			</table>
+			</th>
+
+		</tr>
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"><h1 style="font-size: 100; color:orange;">EAT</h1></th>
+			<th>Friday
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>Vegetable dalia and a glass of milk</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>2 cups watermelon juice</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>Vegetable sambar with brown rice</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup sprouts salad + 2 potato cheela + green chutney</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>Tofu curry with potato and mixed vegetables + 3 chapatti + salad</td>
+				</tr>
+			</table>
+
+			</th>
+			</tr>
+
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Saturday
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>Multigrain parathas with avocado and sliced papaya</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup coconut water + 1 cup pomegrate</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td> Large salad with rajma curry and quinoa 3 chapatti + 1/2 cup curd </td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup fruit salad + 4 pc vegetable cutlets + green chutney</td>
+																				
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td> Lentil pancakes with tofu tikka masala + 3 chaptti + salad</td>
+				</tr>
+			</table>
+			</th>
+
+		</tr>
+
+
+	</table>
+</div>
+
+
+<!-- normal ends -->
+
+
+
+<!-- Chart for overweight category -->
+
+<div id="chart3" style="display:none;">
+	<table style="border: 3px solid black;border-radius: 2px;">
+		<tr><span style="color: rgb(0, 255, 234); background-color: black; width:1000;">This is your chart to reduce your fat..!!
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Sunday
+			
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>3 egg whites + 1 toasted brown bread + 1/2 cup low fat milk (no sugar)</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup papaya</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup arhar dal + 1 chapatti + 1/2 cup low fat curd + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup vegetable soup</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup pumpkin + 1 chapatti + salad</td>
+				</tr>
+			</table>
+			</th>
+
+
+		</tr>
+		
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Monday
+			
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>1 onion stuffed chapatti + 1/2 cup low fat curd</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup coconut water</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup moong dal/ chicken curry + 1 chapatti + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup pomegranate juice </td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup beans + 1 chapatti + salad</td>
+				</tr>
+			</table>
+
+			</th>
+
+		</tr>
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Tuesday
+			
+
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>2 besan cheela + 1/2 cup low fat curd</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 apple</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup masoor dal + 1 chapatti + 1/2 up low fat curd + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup tomato soup</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup carrot peas vegetable +1 chapatti + salad</td>
+				</tr>
+			</table>
+			</th>
+
+		</tr>
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Wednesday
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>1 cup vegetable brown bread upma + 1/2 cup low fat milk (no sugar)</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup musk melon</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup rajma curry + 1 chapatti + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup vegetable soup</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup parwal vegetable + 1 chapatti + salad</td>
+				</tr>
+			</table>
+
+			</th>
+
+		</tr>
+
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"><h1>#EATOFIT</h1></th>
+			<th>Thursday
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>1 cucmber hungcurd sandwich + 1/2 tsp green chutney + 1 orange</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup buttermilk
+</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup white chana/ fish curry + 1 chapatti + salad
+</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup low fat milk (no sugar)
+</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup cauliflower vegetable + 1 chapatti + salad
+</td>
+				</tr>
+			</table>
+			</th>
+
+		</tr>
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Friday
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>1 cup vegetable poha + 1 cup low fat curd</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup watermelon</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup chana dal + 1 chapatti + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup sprouts salad</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup tinda vegetable + 1 chapatti + salad</td>
+				</tr>
+			</table>
+
+			</th>
+			</tr>
+
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Saturday
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>1 cup low fat milk with oats + 3-4 strawberries</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup coconut water</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup soybean curry + 1 chapatti + 1/2 cup low fat curd + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup fruit salad</td>
+																				
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup ghia vegetable + 1 chaptti + salad</td>
+				</tr>
+			</table>
+			</th>
+
+		</tr>
+
+
+	</table>
+</div>
+
+
+<!-- overweight ends  -->
+
+<!-- obeses chart -->
+
+<div id="chart4" style="display:none;">
+	<table style="border: 3px solid black;border-radius: 2px;">
+		<tr><span style="color: Yellow; background-color: black; width:1000;">This is your diet chart to get your tone back..!!
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Sunday
+			
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>3 egg whites + 1 toasted brown bread + 1/2 cup low fat milk (no sugar)</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup papaya</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup arhar dal + 1 chapatti + 1/2 cup low fat curd + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup vegetable soup</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup pumpkin + 1 chapatti + salad</td>
+				</tr>
+			</table>
+			</th>
+
+
+		</tr>
+		
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Monday
+			
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>1 onion stuffed chapatti + 1/2 cup low fat curd</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup coconut water</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup moong dal/ chicken curry + 1 chapatti + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>	
+					<td>1 cup pomegranate juice </td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup beans + 1 chapatti + salad</td>
+				</tr>
+			</table>
+
+			</th>
+
+		</tr>
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Tuesday
+			
+
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>2 besan cheela + 1/2 cup low fat curd</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 apple</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup masoor dal + 1 chapatti + 1/2 up low fat curd + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup tomato soup</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup carrot peas vegetable +1 chapatti + salad</td>
+				</tr>
+			</table>
+			</th>
+
+		</tr>
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Wednesday
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>1 cup vegetable brown bread upma + 1/2 cup low fat milk (no sugar)</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup musk melon</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup rajma curry + 1 chapatti + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup vegetable soup</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup parwal vegetable + 1 chapatti + salad</td>
+				</tr>
+			</table>
+
+			</th>
+
+		</tr>
+
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"><h1>#EAT</h1></th>
+			<th>Thursday
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>1 cucmber hungcurd sandwich + 1/2 tsp green chutney + 1 orange</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup buttermilk
+</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup white chana/ fish curry + 1 chapatti + salad
+</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup low fat milk (no sugar)
+</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup cauliflower vegetable + 1 chapatti + salad
+</td>
+				</tr>
+			</table>
+			</th>
+
+		</tr>
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"><h1>FIT</h1></th>
+			<th>Friday
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>1 cup vegetable poha + 1 cup low fat curd</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup watermelon</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup chana dal + 1 chapatti + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup sprouts salad</td>
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup tinda vegetable + 1 chapatti + salad</td>
+				</tr>
+			</table>
+
+			</th>
+			</tr>
+
+
+		<tr>
+			<th STYLE="writing-mode: vertical-lr;
+                     text-orientation:upright;
+                     transform: rotate(270deg);"></th>
+			<th>Saturday
+			
+			<table>
+				<tr>
+					<td>Breakfast (8:00-8:30AM)</td>
+					<td>1 cup low fat milk with oats + 3-4 strawberries</td>
+				</tr>
+				<tr>
+					<td>Mid-Meal (11:00-11:30AM)</td>
+					<td>1 cup coconut water</td>
+				</tr>
+				<tr>
+					<td>Lunch (2:00-2:30PM)</td>
+					<td>1 cup soybean curry + 1 chapatti + 1/2 cup low fat curd + salad</td>
+				</tr>
+				<tr>
+					<td>Evening (4:00-4:30PM)</td>
+					<td>1 cup fruit salad</td>
+																				
+				</tr>
+				<tr>
+					<td>Dinner (8:00-8:30PM)	</td>
+					<td>1 cup ghia vegetable + 1 chaptti + salad</td>
+				</tr>
+			</table>
+			</th>
+
+		</tr>
+
+
+	</table>
+</div>
+
+
+<!-- obeses ends -->
+<section >
+	<div style="background-color: black">
+	<h1 style="color: white">Your <span style="color:#73e600">Health</span> is our First Priority </h1>
+	</div>
+</section>
+
+<!-- MENU -->
+	<section class="product">
+
+		<div class="product__list__item" style="background-color: black">
+
+			<img height="200" width="500" class="img-responsive" src="food1.jpg" 
+
+alt="">
+
+			<h2 class="product_heading">
+    <span style="color:white;">Eat</span>  <span style="color:#73e600">Healthy</span>
+	</h2>
+	
+
+<p >
+If you eat healthy food it automatically makes ypur mood better 
+ 
+</p>	
+   	
+	</div>
+
+	
+	<div class="product__list__item" style="background-color: black">
+
+			<img height="200" width="500" class="img-responsive" src="food2.jpg" 
+
+alt="">	
+
+			<h2 class="product_heading">
+  <span style="color:white;">Look</span> <span style="color:#73e600">Healthy</span>
+</h2>
+
+		<p>
+If you eat healthy food it automatically makes ypur mood better 
+ 
+</p>
+
+
+
+
+		</div>
+	
+	<div class="product__list__item" style="background-color: black">
+
+			<img height="200" width="500" class="img-responsive" src="food3.jpg" 
+
+alt="">
+	
+		<h2 class="product_heading">
+
+				  <span style="color:white;">Feel</span>  <span style="color:#73e600">healthy</span>			</h2>
+
+<p>
+If you eat healthy food it automatically makes ypur mood better
+ 
+</p>
+	
+	</div>
+<section><br></section>	
+<center>
+<table height="100" border="0" cellspacing="0" cellpadding="0" bgcolor="#0000000" style="width: 1000">
+	<tr>
+		<td align="center" >
+			<font face="Verdana" color="white">Home-<span style="color:#73e600">About</span>-Contact</font><br>
+
+
+			<font  face="Verdana" color="white">@Copyrights <span style="color:#73e600">2021</span> </font>
+			
+			
+		</td>
+
+	</tr>
+
+</center>
+
+
+	</section>
+
+</header>
+</center>
+</body>
+</html>
